@@ -1,0 +1,13 @@
+<div
+  *ngIf="show"
+  class="mention-menu"
+  [style.left]="coords.left + 'px'"
+  [style.top]="coords.top + 'px'"
+>
+  <ul>
+    <li *ngFor="let item of items; let i = index" class="mention-item" [class.active]="i == activeItem" (mousedown)="selectItem(item);$event.preventDefault()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="eva eva-person" fill="currentColor"><g data-name="Layer 2"><g data-name="person"><rect width="24" height="24" opacity="0"></rect><path d="M12 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4z"></path><path d="M18 21a1 1 0 0 0 1-1 7 7 0 0 0-14 0 1 1 0 0 0 1 1z"></path></g></g></svg>
+      &nbsp; @{{ item.name }}
+    </li>
+  </ul>
+</div>

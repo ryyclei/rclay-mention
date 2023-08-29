@@ -1,0 +1,32 @@
+<nb-layout windowMode="true">
+  <nb-layout-header fixed>
+    <nb-icon icon="message-square-outline"></nb-icon><span>&nbsp; Leave Comment</span>
+  </nb-layout-header>
+
+  <nb-layout-column class="container">
+    <nb-card size="medium" class="comments-panel">
+      <nb-card-header> Comments </nb-card-header>
+      <nb-list>
+        <nb-list-item *ngFor="let comment of comments" >
+          <nb-icon icon="message-square-outline"></nb-icon> &nbsp;
+          <span [innerHTML]="comment">
+          </span>
+        </nb-list-item>
+      </nb-list>
+    </nb-card>
+    <nb-card>
+      <nb-card-body>
+        <textarea
+          nbInput
+          fullWidth
+          placeholder="Textarea"
+          [mention]="{ items: users }"
+          [(ngModel)]="newComment"
+        ></textarea>
+        <button nbButton status="primary" style="float: right" (click)="addComment()">
+          Add Comment
+        </button>
+      </nb-card-body>
+    </nb-card>
+  </nb-layout-column>
+</nb-layout>

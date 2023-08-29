@@ -1,0 +1,48 @@
+.mention-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  min-width: 11em;
+  padding: 1em;
+  font-size: 1em;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25em;
+  transform: translateY(-100%);
+  box-shadow: 2px 2px 15px 4px rgba(0, 0, 0, 0.1)
+}
+
+.mention-menu > ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.mention-item {
+  line-height: 1.5em;
+  font-weight: 400;
+  color: #212529;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  display:flex;
+  align-items: center;
+}
+
+.mention-item:hover {
+  line-height: 1.5em;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  background-color: rgb(243, 243, 243);
+}
+
+.mention-item.active {
+  background-color: rgb(243, 244, 248);
+}
